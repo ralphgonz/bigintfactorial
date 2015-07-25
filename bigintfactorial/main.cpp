@@ -85,4 +85,5 @@ int main() {
     cin >> n;
     BigInteger result = factorial(n);
     cout << result << endl;
+    return 0;
 }
