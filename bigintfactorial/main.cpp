@@ -26,7 +26,7 @@ BigInteger::BigInteger(long n) {
 }
 
 BigInteger::BigInteger(const BigInteger& b) {
-	for (vector<long>::const_iterator i=b.parts.begin() ; i != b.parts.end() ; ++i) {
+	for (auto i=b.parts.begin() ; i != b.parts.end() ; ++i) {
 		parts.push_back(*i);
 	}
 }
@@ -65,7 +65,7 @@ BigInteger operator* (const BigInteger& a, const BigInteger& b) {
 }
 ostream &operator<<(ostream &os, BigInteger const &b) {
 	// Don't fill first part:
-	vector<long>::const_reverse_iterator i = b.parts.rbegin();
+	auto i = b.parts.rbegin();
 	if (i != b.parts.rend()) {
 		os << *i;
 		++i;
